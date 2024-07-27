@@ -22,7 +22,7 @@ connectDb()
 app.use('/api/v1/transactions', require('./routes/transactionRoutes'))
 
 //port
-const PORT =  process.env.PORT || 4000
+const PORT =  process.env.PORT || 5000
 
 //listen server
 

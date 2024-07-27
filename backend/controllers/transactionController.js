@@ -26,7 +26,7 @@ const addTransaction = async(req, res)=>{
 
             const Transaction = new transactionModel({ amount, type, description, date: formattedDate });
             await Transaction.save()
-            res.status(201).send( addedTransaction:Transaction,  message:"Transaction Added Successfully")
+            res.status(201).send( {addedTransaction:Transaction,  message:"Transaction Added Successfully"})
 
         } catch (error) {
             res.status(500).json(error)
