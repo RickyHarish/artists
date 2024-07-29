@@ -1,12 +1,15 @@
 const mongoose = require('mongoose')
 const colors = require('colors')
 mongoose.set('debug', true);
+const username = encodeURIComponent("Harish");
+const password = encodeURIComponent("abcd1234");
 
+const URL = `mongodb+srv://${username}:${password}@artists.tgfc6jz.mongodb.net/?retryWrites=true&w=majority&appName=Artists`
 
 const connectDb = async () => {
     try {
         console.log("Attempting to connect to MongoDB...");
-        await mongoose.connect(process.env.MONGO_URL, {
+        await mongoose.connect(URL, {
             
         });
         console.log("MongoDB connected successfully");
